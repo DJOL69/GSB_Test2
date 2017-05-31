@@ -141,6 +141,14 @@ class PdoGsb{
 		$lesLignes = $stmt->fetchAll();
 		return $lesLignes;
 	}
+
+    public function getTablettes(){
+        $req = "select * from tablettes";
+        $stmt = PdoGsb::$monPdo->prepare($req);
+                $stmt->execute();
+        $lesLignes = $stmt->fetchAll();
+        return $lesLignes;
+    }
 /**
  * Met à jour la table ligneFraisForfait
  

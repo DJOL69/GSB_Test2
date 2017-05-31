@@ -1,0 +1,21 @@
+{% extends "PgGsbFraisBundle::accueil.html.twig" %}
+
+{% block body %}
+{% block bloc1 %}
+<div id="contenu">
+
+	<table border="4" width="100%">
+	<caption>tablettes</caption>
+	<tr>
+		<th>id</th><th>capacité</th><th>marque</th>
+	</tr>
+	{% for tablettes in liste %}
+		<tr>
+			<td>{{ tablettes.id }}</td>
+			<td>{{ tablettes.capacité }}</td>
+			<td>{{ tablettes.marque }}</td>
+		</tr>
+	{% endfor %}
+{% endblock %}
+{% endblock %}
+
